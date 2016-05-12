@@ -1919,7 +1919,6 @@ class OutputParameterJSONTool( Tool ):
     def _prepare_json_param_dict( self, param_dict ):
         rval = {}
         for key, value in param_dict.iteritems():
-            key = str(key)
             if isinstance( value, dict ):
                 rval[ key ] = self._prepare_json_param_dict( value )
             elif isinstance( value, list ):
